@@ -1,0 +1,20 @@
+{
+    "name": "rupertjeff/dynamic-routing",
+    "description": "",
+    "authors": [
+        {
+            "name": "Jeff Rupert",
+            "email": "rupert.jeff@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.1.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Rupertjeff\\DynamicRouting": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
