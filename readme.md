@@ -12,33 +12,33 @@ You can pull the package in through Composer:
 		}
 	}
 
-Once the package exists and it’s being loaded into your project, create an instance of `Rupertjeff\DynamicRouting\Support\Contracts\RouteCreator`. Give that to this package and it’ll go from there!
+Once the package exists and it’s being loaded into your project, create an instance of `Rupertjeff\DynamicRouting\Contracts\RouteCreator`. Give that to this package and it’ll go from there!
 
-	// Where $creator is an instance of Rupertjeff\DynamicRouting\Support\Contracts\RouteCreator
+	// Where $creator is an instance of Rupertjeff\DynamicRouting\Contracts\RouteCreator
 	DynamicRouter::create($creator)
 
 ### Laravel 4
 
 If you’re using Laravel 4 (as I do, mostly), you can add the included ServiceProvider and Facade to make things easier for you. Just add
 
-	'Rupertjeff\DynamicRouting\DynamicRoutingServiceProvider'
+	'Rupertjeff\DynamicRouting\Laravel\DynamicRoutingServiceProvider'
 
 to your `'providers'` array in `./app/config/app.php`, and
 
-	'DynamicRouter' => 'Rupertjeff\DynamicRouting\Support\Facade'
+	'DynamicRouter' => 'Rupertjeff\DynamicRouting\Laravel\Facade'
 
 to your `'aliases'` array. Don’t like the Laravel Facade approach? Grab it off of `$this->app['dynamicRouter']` or create your own out of the IoC container.
 
 ### Other Projects
 
-Create an implementation of `Rupertjeff\DynamicRouting\Support\Contract\Router` and make sure to create a `Rupertjeff\DynamicRouting\Router` with that first class as the first parameter to the constructor.
+Create an implementation of `Rupertjeff\DynamicRouting\Contract\Router` and make sure to create a `Rupertjeff\DynamicRouting\Router` with that first class as the first parameter to the constructor.
 
-	// Where $router is an instance of Rupertjeff\DynamicRouting\Support\Contract\Router
+	// Where $router is an instance of Rupertjeff\DynamicRouting\Contract\Router
 	$dynamicRouter = new Rupertjeff\DynamicRouting\Router($router);
 
 Then just call
 
-	// Where $creator is an instance of Rupertjeff\DynamicRouting\Support\Contracts\RouteCreator
+	// Where $creator is an instance of Rupertjeff\DynamicRouting\Contracts\RouteCreator
 	$dynamicRouter->create($creator);
 
 That’s it!
