@@ -1,4 +1,4 @@
-<?php namespace Rupertjeff\DynamicRouting;
+<?php namespace Rupertjeff\DynamicRouting\Laravel;
 
 /**
  * @see \Rupertjeff\DynamicRouting\Router

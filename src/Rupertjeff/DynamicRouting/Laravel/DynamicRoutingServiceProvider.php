@@ -1,4 +1,4 @@
-<?php namespace Rupertjeff\DynamicRouting;
+<?php namespace Rupertjeff\DynamicRouting\Laravel;
 
 use Illuminate\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
