@@ -1,20 +1,25 @@
 {
-    "name": "rupertjeff/dynamic-routing",
-    "description": "",
-    "authors": [
-        {
-            "name": "Jeff Rupert",
-            "email": "rupert.jeff@gmail.com"
-        }
-    ],
-    "require": {
-        "php": ">=5.3.0",
-        "illuminate/support": "4.1.*"
-    },
-    "autoload": {
-        "psr-0": {
-            "Rupertjeff\\DynamicRouting": "src/"
-        }
-    },
-    "minimum-stability": "stable"
+	"name": "rupertjeff/dynamic-routing",
+	"description": "",
+	"authors": [
+		{
+			"name": "Jeff Rupert",
+			"email": "rupert.jeff@gmail.com"
+		}
+	],
+	"require": {
+		"php": ">=5.3.0",
+		"illuminate/support": "4.1.*"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "4.0.*",
+		"mockery/mockery": "0.9.*@dev",
+		"phpspec/phpspec": "2.0.*@dev"
+	},
+	"autoload": {
+		"psr-0": {
+			"Rupertjeff\\DynamicRouting": "src/"
+		}
+	},
+	"minimum-stability": "stable"
 }

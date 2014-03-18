@@ -1,5 +1,6 @@
 <?php namespace Rupertjeff\DynamicRouting;
 
+use Illuminate\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
 
 class DynamicRoutingServiceProvider extends ServiceProvider {
@@ -18,7 +19,12 @@ class DynamicRoutingServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		//
+		$this->app->bind('Rupertjeff\DynamicRouting\Contracts\Router', 'Rupertjeff\DynamicRouting\Laravel\Router');
+
+		$this->app['routeCreator'] = $this->app->share(function (Application $app)
+		{
+			return new Router($app->make('Rupertjeff\DynamicRouting\Contracts\Router'));
+		});
 	}
 
 	/**
@@ -28,7 +34,7 @@ class DynamicRoutingServiceProvider extends ServiceProvider {
 	 */
 	public function provides()
 	{
-		return [];
+		return array();
 	}
 
 }
