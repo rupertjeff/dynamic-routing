@@ -1,5 +1,7 @@
 # Dynamic Routing
 
+[![Build Status](https://travis-ci.org/rupertjeff/dynamic-routing.png?branch=0.1.0)](https://travis-ci.org/rupertjeff/dynamic-routing)
+
 I’ve found that I often times need to have functionality for client/CMS defined routing in my sites, so I put together a quick library that deals with the creation of said routes.
 
 ## Usage
