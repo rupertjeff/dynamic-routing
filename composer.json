@@ -1,6 +1,8 @@
 {
 	"name": "rupertjeff/dynamic-routing",
-	"description": "",
+	"description": "A tool for adding dynamic routes to a project, such as routes defined in a database table, etc.",
+	"keywords": ["router", "routing", "route"],
+	"license": "MIT",
 	"authors": [
 		{
 			"name": "Jeff Rupert",
@@ -12,8 +14,6 @@
 		"illuminate/support": "4.1.*"
 	},
 	"require-dev": {
-		"phpunit/phpunit": "4.0.*",
-		"mockery/mockery": "0.9.*@dev",
 		"phpspec/phpspec": "2.0.*@dev"
 	},
 	"autoload": {
